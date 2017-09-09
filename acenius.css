@@ -1,0 +1,124 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#menu{
+    min-width: 250px;
+    float: left;
+    height: 100vh;
+    background: lightgray;
+    border-right: 2px solid darkgray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-wrapper form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.menu-wrapper form > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type=number]{
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    font-size: 1.3em;
+}
+input[type=text]{
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 120px;
+    font-size: 1.3em;
+}
+.row{
+    width: calc(100%-250px);
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.row.players img{
+    width: 40%;
+}
+.player-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.game #images{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.row.game #images img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    filter: opacity(0);
+    -webkit-box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+    transition: all .5s ease;
+}
+.row.game #images div{
+    background: rgba(183,222,237,1);
+    background: -moz-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 7%, rgba(26,149,186,1) 96%, rgba(75,112,125,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,1)), color-stop(7%, rgba(113,206,239,1)), color-stop(96%, rgba(26,149,186,1)), color-stop(100%, rgba(75,112,125,1)));
+    background: -webkit-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 7%, rgba(26,149,186,1) 96%, rgba(75,112,125,1) 100%);
+    background: -o-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 7%, rgba(26,149,186,1) 96%, rgba(75,112,125,1) 100%);
+    background: -ms-linear-gradient(top, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 7%, rgba(26,149,186,1) 96%, rgba(75,112,125,1) 100%);
+    background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 7%, rgba(26,149,186,1) 96%, rgba(75,112,125,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#4b707d', GradientType=0 );
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all .1s ease;
+    -webkit-box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.75);
+}
+.row.game #images div:hover{
+    background: rgba(75,112,125,1);
+    background: -moz-linear-gradient(top, rgba(75,112,125,1) 0%, rgba(26,149,186,1) 2%, rgba(113,206,239,1) 97%, rgba(183,222,237,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75,112,125,1)), color-stop(2%, rgba(26,149,186,1)), color-stop(97%, rgba(113,206,239,1)), color-stop(100%, rgba(183,222,237,1)));
+    background: -webkit-linear-gradient(top, rgba(75,112,125,1) 0%, rgba(26,149,186,1) 2%, rgba(113,206,239,1) 97%, rgba(183,222,237,1) 100%);
+    background: -o-linear-gradient(top, rgba(75,112,125,1) 0%, rgba(26,149,186,1) 2%, rgba(113,206,239,1) 97%, rgba(183,222,237,1) 100%);
+    background: -ms-linear-gradient(top, rgba(75,112,125,1) 0%, rgba(26,149,186,1) 2%, rgba(113,206,239,1) 97%, rgba(183,222,237,1) 100%);
+    background: linear-gradient(to bottom, rgba(75,112,125,1) 0%, rgba(26,149,186,1) 2%, rgba(113,206,239,1) 97%, rgba(183,222,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b707d', endColorstr='#b7deed', GradientType=0 );
+    animation: shake .1s ease-in-out;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+    @keyframes shake {
+    0% {
+        transform: scale(1.2);
+    }
+
+    20% {
+        transform: translateX(-2px);
+    }
+
+
+    100% {
+        transform: translateX(2px);
+    }
+}
